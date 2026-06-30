@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official certificate verification portal of Techno Electric & Engineering Company Pvt. Ltd.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#003366">
+    <title>TEEC Certificate Verification</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo-area">
+
+            <img src="img/logo.png"
+                 alt="Techno Electric & Engineering Company"
+                 class="logo">
+
+            <div>
+
+                <h1>
+
+                    Techno Electric & Engineering Company Pvt. Ltd.
+
+                </h1>
+
+                <p id="portalSubtitle">
+
+                    Certificate Verification Portal
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============== MAIN CARD ================= -->
+
+    <main class="card">
+
+        <div id="loading">
+
+            <div class="spinner"></div>
+
+            <p>
+
+                Verifying Certificate...
+
+            </p>
+
+        </div>
+
+
+        <div id="certificate" style="display:none;">
+
+
+            <!-- STATUS -->
+
+            <section class="status-section">
+
+                <div id="statusBadge" class="badge">
+
+                    VERIFIED
+
+                </div>
+
+            </section>
+
+
+            <!-- BASIC INFORMATION -->
+
+            <section>
+
+                <h2>
+
+                    Certificate Information
+
+                </h2>
+
+                <table class="info-table">
+
+                    <tr>
+
+                        <th>Certificate No.</th>
+
+                        <td id="certificate_no"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Document Type</th>
+
+                        <td id="document_type"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Issued To</th>
+
+                        <td id="issued_to"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Client Code</th>
+
+                        <td id="client_code"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Bid Notice</th>
+
+                        <td id="bid_notice"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Procurement</th>
+
+                        <td id="procurement"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Contract Agreement</th>
+
+                        <td id="contract"></td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+            <!-- EQUIPMENT -->
+
+            <section>
+
+                <h2>
+
+                    Equipment Details
+
+                </h2>
+
+                <table class="equipment-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Description</th>
+
+                        <th>Model</th>
+
+                        <th>Origin</th>
+
+                        <th>Quantity</th>
+
+                        <th>Serial Number(s) </th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="equipmentTable">
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- MANUFACTURER-->
+
+            <section>
+
+                <h2>
+
+                    Manufacturer Information
+
+                </h2>
+
+                <table class="info-table">
+
+                    <tr>
+
+                        <th>Manufacturer</th>
+
+                        <td id="manufacturer"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Country</th>
+
+                        <td id="country_origin"></td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section>
+
+                <h2>
+
+                    Supplier Information
+
+                </h2>
+
+                <table class="info-table">
+
+                    <tr>
+
+                        <th>Supplier</th>
+
+                        <td id="supplier"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Website</th>
+
+                        <td>
+
+                            <a id="supplierWebsite"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                        </a>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Country</th>
+
+                        <td id="supplierCountry"></td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+            <!-- WARRANTY -->
+
+            <section>
+
+                <h2>
+
+                    Warranty
+
+                </h2>
+
+                <table class="info-table">
+
+                    <tr>
+
+                        <th>Issue Date</th>
+
+                        <td id="issue_date"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Delivery Date</th>
+
+                        <td id="delivery_date"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Warranty Period</th>
+
+                        <td id="warranty_period"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Expiry Date</th>
+
+                        <td id="expiry_date"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Remaining</th>
+
+                        <td id="remaining_days"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Coverage</th>
+
+                        <td id="coverage"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Exclusions</th>
+
+                        <td id="exclusions"></td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+            <!-- DOCUMENT HASH -->
+
+            <section>
+
+                <h2>
+
+                    Document Fingerprint
+
+                </h2>
+
+                <div class="hash-box">
+
+                    <code id="hash"></code>
+
+                    <button id="copyHash">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- TIMELINE -->
+
+            <section>
+
+                <h2>
+
+                    Certificate Timeline
+
+                </h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="circle"></div>
+
+                        <div>
+
+                            <strong>
+
+                                Certificate Issued
+
+                            </strong>
+
+                            <p id="timeline_issue"></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <div class="circle"></div>
+
+                        <div>
+
+                            <strong>
+
+                                Delivered
+
+                            </strong>
+
+                            <p id="timeline_delivery"></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <div class="circle"></div>
+
+                        <div>
+
+                            <strong>
+
+                                Warranty Expiry
+
+                            </strong>
+
+                            <p id="timeline_expiry"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PDF -->
+
+            <section>
+
+                <h2>
+
+                    Original Document
+
+                </h2>
+
+                <a id="pdfLink"
+
+                class="download-btn"
+
+                    target="_blank"
+                   
+                    rel="noopener noreferrer">
+
+                    View Original PDF
+
+                </a>
+
+            </section>
+
+            <section>
+
+                <h2>
+
+                    Verification Information
+
+                </h2>
+
+                <table class="info-table">
+
+                    <tr>
+
+                        <th>Verified On</th>
+
+                        <td id="verifiedOn"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Verification Method</th>
+
+                        <td>
+
+                            Official TEEC Certificate Registry
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Revision</th>
+
+                        <td id="revision"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>SHA-256</th>
+
+                        <td>
+
+                            <div class="hash-box">
+
+                                <code id="hash"></code>
+
+                                <button id="copyHash">
+
+                                    Copy
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- INVALID -->
+
+        <div id="notFound" style="display:none;">
+
+            <h2>
+
+                Certificate Not Found
+
+            </h2>
+
+            <p>
+
+                The certificate number you entered does not exist in our verification database.
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            This portal is the official online verification service for digital warranty certificates issued by Techno Electric & Engineering Company Pvt. Ltd. 
+
+            <strong>
+
+                Techno Electric & Engineering Company Pvt. Ltd.
+
+            </strong>
+
+            The information displayed here supersedes printed copies in the event of any discrepancy.
+
+        </p>
+
+        <p>
+
+            Website:
+            <a href="https://teec.com.np">
+
+                www.teec.com.np
+
+            </a>
+
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

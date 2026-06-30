@@ -1,0 +1,168 @@
+{
+  "01-TMOKV-2082-83": {
+
+    "status": "Active",
+
+    "document_type": "Warranty Certificate",
+
+    "reference": {
+
+      "certificate_no": "01-TMOKV-2082-83",
+
+      "client_code": "TMOKV",
+
+      "bid_notice": "01/2082-083/Re-SQ/Goods/TMOVKaski",
+
+      "procurement": "Supply and Delivery of Emission Tester (Diesel/Petrol)",
+
+      "contract": "Handover Letter"
+
+    },
+
+    "customer": {
+
+      "organization": "Traffic Management Office, Kaski",
+
+      "address": "Pokhara, Kaski, Nepal"
+
+    },
+
+    "supplier": {
+
+      "name": "Techno Electric and Engineering Company Pvt. Ltd.",
+
+      "website": "https://teec.com.np",
+
+      "country": "Nepal"
+
+    },
+
+    "manufacturer": {
+
+      "name": "Nanhua Instruments Co., Ltd.",
+
+      "country": "China"
+
+    },
+
+    "warranty": {
+
+      "issue_date": "2026-06-30",
+
+      "delivery_date": "2026-06-30",
+
+      "validity_months": 12,
+
+      "coverage": "Manufacturer's defects, workmanship defects and supplied accessories under normal operating conditions.",
+
+      "exclusions": [
+
+        "Physical damage",
+
+        "Unauthorized repair",
+
+        "Misuse or negligence",
+
+        "Natural disasters",
+
+        "Consumables"
+
+      ]
+
+    },
+
+    "equipment": [
+
+      {
+
+        "description": "Diesel Smoke Meter (Diesel Emission Tester)",
+
+        "model": "NHT-6",
+
+        "catalogue_model": "NHT-6",
+
+        "quantity": 2,
+
+        "origin": "China",
+
+        "serial_numbers": [
+
+          "NHT6-001",
+
+          "NHT6-002"
+
+        ]
+
+      },
+
+      {
+
+        "description": "Automotive Emission Analyzer (5 Gas Emission Tester)",
+
+        "model": "NHA-506",
+
+        "catalogue_model": "NHA-506",
+
+        "quantity": 1,
+
+        "origin": "China",
+
+        "serial_numbers": [
+
+          "NHA506-001"
+
+        ]
+
+      }
+
+    ],
+
+    "files": {
+
+      "pdf": "01-TMOKV-2082-83.pdf",
+
+      "sha256": "REPLACE_WITH_REAL_SHA256_HASH"
+
+    },
+
+    "history": [
+
+      {
+
+        "date": "2026-06-30",
+
+        "event": "Certificate Issued"
+
+      },
+
+      {
+
+        "date": "2026-06-30",
+
+        "event": "Equipment Delivered"
+
+      },
+
+      {
+
+        "date": "2027-06-29",
+
+        "event": "Warranty Expires"
+
+      }
+
+    ],
+
+    "revision": {
+
+      "version": 1,
+
+      "last_updated": "2026-06-30",
+
+      "revoked": false
+
+    }
+
+  }
+
+}

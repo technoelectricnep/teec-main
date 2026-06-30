@@ -1,0 +1,438 @@
+/* ==========================================================
+   Techno Electric & Engineering Company Pvt. Ltd.
+   Certificate Verification Portal
+========================================================== */
+
+:root{
+    --primary:#003366;
+    --primary-light:#0b4c8a;
+    --success:#1f8f46;
+    --warning:#f39c12;
+    --danger:#c62828;
+    --bg:#f4f7fb;
+    --card:#fff;
+    --border:#d8dce3;
+    --text:#222;
+    --muted:#666;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --radius:12px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+::selection{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ========================================================== */
+
+.page{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* ========================================================== */
+
+.header{
+    background:#fff;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    width:95px;
+    height:auto;
+    flex-shrink:0;
+}
+
+.header h1{
+    color:var(--primary);
+    font-size:clamp(1.5rem,3vw,2rem);
+    margin-bottom:5px;
+}
+
+.header p{
+    color:var(--muted);
+}
+
+/* ========================================================== */
+
+.card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:40px;
+    transition:.25s;
+}
+
+/* ========================================================== */
+
+.status-section{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 30px;
+    border-radius:999px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:.6px;
+}
+
+.badge.active{
+    background:var(--success);
+}
+
+.badge.expired{
+    background:var(--warning);
+}
+
+.badge.revoked{
+    background:var(--danger);
+}
+
+.badge.cancelled{
+    background:#555;
+}
+
+/* ========================================================== */
+
+section{
+    margin-top:45px;
+}
+
+section h2{
+    color:var(--primary);
+    border-left:5px solid var(--primary);
+    padding-left:12px;
+    margin-bottom:15px;
+}
+
+/* ========================================================== */
+
+.table-wrapper{
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    border-radius:var(--radius);
+}
+
+.info-table,
+.equipment-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+.info-table th,
+.info-table td,
+.equipment-table th,
+.equipment-table td{
+    border:1px solid var(--border);
+    padding:14px;
+    vertical-align:top;
+}
+
+.info-table th{
+    width:260px;
+    background:#f5f7fa;
+    text-align:left;
+    font-weight:600;
+}
+
+.info-table td{
+    background:#fff;
+}
+
+.equipment-table{
+    min-width:900px;
+}
+
+.equipment-table th{
+    background:var(--primary);
+    color:#fff;
+    text-align:left;
+}
+
+.equipment-table td{
+    background:#fff;
+    white-space:nowrap;
+}
+
+.equipment-table td:first-child{
+    white-space:normal;
+}
+
+.info-table a{
+    color:var(--primary);
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.info-table a:hover{
+    text-decoration:underline;
+}
+
+/* ========================================================== */
+
+.hash-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hash-box code{
+    flex:1;
+    background:#f5f5f5;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:15px;
+    overflow-wrap:anywhere;
+    font-family:Consolas,"Courier New",monospace;
+    font-size:.9rem;
+}
+
+/* ========================================================== */
+
+button,
+.download-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    border-radius:8px;
+    padding:12px 24px;
+    font-size:15px;
+    text-decoration:none;
+    transition:.25s;
+}
+
+button:hover,
+.download-btn:hover{
+    background:var(--primary-light);
+}
+
+button:focus,
+.download-btn:focus,
+a:focus{
+    outline:3px solid #7ab8ff;
+    outline-offset:2px;
+}
+
+/* ========================================================== */
+
+.timeline{
+    position:relative;
+    padding-left:35px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:12px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#c9d3df;
+}
+
+.timeline-item{
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.circle{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:var(--primary);
+    margin-right:18px;
+    position:relative;
+    left:-32px;
+}
+
+/* ========================================================== */
+
+#loading{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:8px solid #ddd;
+    border-top:8px solid var(--primary);
+    animation:spin .8s linear infinite;
+    margin:0 auto 25px;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ========================================================== */
+
+#notFound{
+    text-align:center;
+    padding:80px 30px;
+}
+
+#notFound h2{
+    color:var(--warning);
+}
+
+/* ========================================================== */
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:var(--muted);
+    font-size:.95rem;
+}
+
+footer a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ========================================================== */
+
+@media (max-width:900px){
+
+    .header{
+        text-align:center;
+    }
+
+    .logo-area{
+        flex-direction:column;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .info-table th{
+        width:180px;
+    }
+
+}
+
+/* ========================================================== */
+
+@media (max-width:700px){
+
+    .info-table,
+    .info-table tbody,
+    .info-table tr,
+    .info-table th,
+    .info-table td{
+        display:block;
+        width:100%;
+    }
+
+    .info-table tr{
+        margin-bottom:15px;
+    }
+
+    .info-table th{
+        border-bottom:none;
+        background:#eef3f8;
+    }
+
+    .equipment-table{
+        display:table;
+        min-width:900px;
+    }
+
+    .hash-box{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    button,
+    .download-btn{
+        width:100%;
+    }
+
+}
+
+/* ========================================================== */
+
+@media print{
+
+    body{
+        background:#fff;
+    }
+
+    .header,
+    .card{
+        box-shadow:none;
+    }
+
+    .table-wrapper{
+        overflow:visible;
+    }
+
+    .info-table,
+    .equipment-table{
+        page-break-inside:avoid;
+    }
+
+    button,
+    .download-btn{
+        display:none;
+    }
+
+    footer{
+        margin-top:20px;
+    }
+
+}
