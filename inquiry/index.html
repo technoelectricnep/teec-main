@@ -1,0 +1,112 @@
+<!-- inquiry/index.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Project Inquiry | TEEC</title>
+    <meta name="description" content="Initiate a project consultation with Techno Electric & Engineering Company.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="TEEC Homepage">
+                    TEEC
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#corporate-profile">Profile</a></li>
+                    <li><a href="../index.html#capabilities">Capabilities</a></li>
+                    <li><a href="../index.html#deployments">Deployments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="page-header">
+            <div class="container-sm">
+                <span class="eyebrow">Client Services</span>
+                <h1>Project Inquiry</h1>
+                <p class="text-lg">Transmit preliminary parameters for technical review.</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container-sm">
+                <form id="inquiry-form" class="mt-8" aria-label="Project Inquiry Form">
+                    <div class="grid grid-cols-2">
+                        <div class="form-group">
+                            <label class="form-label" for="corporate-entity">Corporate Entity / Client Name</label>
+                            <input type="text" id="corporate-entity" class="form-control" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Official Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2">
+                        <div class="form-group">
+                            <label class="form-label" for="project-classification">Sector Classification</label>
+                            <select id="project-classification" class="form-control" required aria-required="true">
+                                <option value="">Select parameter...</option>
+                                <option value="hospitality">Hospitality (Hotel / Resort)</option>
+                                <option value="commercial">Commercial Complex</option>
+                                <option value="industrial">Industrial Facility</option>
+                                <option value="institutional">Institutional</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="site-location">Site Location</label>
+                            <input type="text" id="site-location" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label class="form-label">Anticipated Infrastructure Scope</label>
+                        <div style="display: flex; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-3);">
+                            <label style="display: flex; gap: 8px; align-items: center; font-size: var(--text-sm);">
+                                <input type="checkbox" name="scope" value="electrical"> Electrical Distribution
+                            </label>
+                            <label style="display: flex; gap: 8px; align-items: center; font-size: var(--text-sm);">
+                                <input type="checkbox" name="scope" value="elv"> ELV / Data Networks
+                            </label>
+                            <label style="display: flex; gap: 8px; align-items: center; font-size: var(--text-sm);">
+                                <input type="checkbox" name="scope" value="fire"> Fire Detection
+                            </label>
+                            <label style="display: flex; gap: 8px; align-items: center; font-size: var(--text-sm);">
+                                <input type="checkbox" name="scope" value="automation"> Automation Integration
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-8">
+                        <label class="form-label" for="project-parameters">Project Parameters / Overview</label>
+                        <textarea id="project-parameters" class="form-control" placeholder="Provide details regarding project scale, current phase of construction, and target milestones."></textarea>
+                    </div>
+
+                    <div class="mt-8">
+                        <button type="submit" class="btn btn-primary">Transmit Inquiry</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-primary mt-12" role="contentinfo">
+        <div class="container text-center">
+            <p class="text-sm m-0" style="color: rgba(255,255,255,0.5);">&copy; <span id="current-year"></span> Techno Electric & Engineering Company Pvt. Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

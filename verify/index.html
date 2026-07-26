@@ -1,0 +1,70 @@
+<!-- verify/index.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document Verification | TEEC</title>
+    <meta name="description" content="Verify the authenticity of TEEC completion certificates and credentials.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="TEEC Homepage">
+                    TEEC
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../downloads/index.html">Documents</a></li>
+                    <li><a href="../inquiry/index.html" class="btn btn-primary">Project Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="page-header">
+            <div class="container-sm">
+                <span class="eyebrow">Trust & Validation</span>
+                <h1>Certificate Verification</h1>
+                <p class="text-lg">Validate engineering credentials, compliance letters, and completion certificates.</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container-sm">
+                <div class="bg-surface p-8" style="padding: var(--space-8); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);">
+                    <form id="verify-form" aria-label="Verification Form">
+                        <div class="form-group m-0">
+                            <label class="form-label" for="document-id">Document Identification Number</label>
+                            <div style="display: flex; gap: var(--space-4); margin-top: var(--space-2);">
+                                <input type="text" id="document-id" class="form-control" style="font-family: var(--font-mono);" placeholder="e.g., TEEC-2023-XXXX" required aria-required="true">
+                                <button type="submit" class="btn btn-primary">Validate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="verify-result" style="display: none;" aria-live="polite">
+                    <!-- Status injected via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer bg-primary mt-12" style="position: absolute; bottom: 0; width: 100%;" role="contentinfo">
+        <div class="container text-center">
+            <p class="text-sm m-0" style="color: rgba(255,255,255,0.5);">&copy; <span id="current-year"></span> Techno Electric & Engineering Company Pvt. Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
